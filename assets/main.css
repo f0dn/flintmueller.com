@@ -1,9 +1,21 @@
 :root {
-  --dark-black: #1f1f1f;
+  --base_color: hsl(220, 50%, 60%);
+  --base_color_2: hsl(from var(--base_color) h s calc(l - 0.1));
+  --base_color_3: hsl(from var(--base_color) h s calc(l - 0.2));
+  --base_color_4: hsl(from var(--base_color) h s calc(l - 0.3));
+  --base_color_5: hsl(from var(--base_color) h s calc(l - 0.4));
+  --base_color_6: hsl(from var(--base_color) h s calc(l - 0.5));
+  --white_color: hsl(0, 0%, 80%);
+  --black_color: hsl(0, 0%, 10%);
+  --purple_color: hsl(from var(--base_color) calc(h + 60) s l);
+  --red_color: hsl(from var(--base_color) calc(h + 120) s l);
+  --yellow_color: hsl(from var(--base_color) calc(h + 180) s l);
+  --green_color: hsl(from var(--base_color) calc(h + 240) s l);
+  --sea_color: hsl(from var(--base_color) calc(h + 300) s l);
 }
 
 body {
-  background-color: var(--dark-black);
+  background-color: var(--base_color_4);
 }
 
 #main {
@@ -12,5 +24,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base_color);
 }

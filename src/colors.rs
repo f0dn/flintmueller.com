@@ -1,0 +1,13 @@
+const BASE: &str = "var(--base_color)";
+const BASE_2: &str = "var(--base_color_2)";
+const BASE_3: &str = "var(--base_color_3)";
+const BASE_4: &str = "var(--base_color_4)";
+const BASE_5: &str = "var(--base_color_5)";
+const BASE_6: &str = "var(--base_color_6)";
+const WHITE: &str = "var(--white_color)";
+const BLACK: &str = "var(--black_color)";
+const PURPLE: &str = "var(--purple_color)";
+const RED: &str = "var(--red_color)";
+const YELLOW: &str = "var(--yellow_color)";
+const GREEN: &str = "var(--green_color)";
+const SEA: &str = "var(--sea_color)";

@@ -3,6 +3,8 @@
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
+mod colors;
+mod header;
 mod home;
 
 use home::Home;
