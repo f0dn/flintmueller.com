@@ -16,7 +16,7 @@ asset_dir = "assets"
 [web.app]
 
 # HTML title tag content
-title = "flint"
+title = "Flint Mueller"
 
 [web.watcher]
 
@@ -31,7 +31,7 @@ watch_path = ["src", "assets"]
 
 # CSS style file
 
-style = []
+style = ["main.css"]
 
 # Javascript code file
 script = []
