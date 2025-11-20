@@ -1,6 +1,9 @@
 use dioxus::prelude::*;
 
 use crate::header::Header;
+use crate::links::Links;
+use crate::projects::Projects;
+use crate::section::Section;
 
 #[component]
 pub fn Home() -> Element {
@@ -11,8 +14,10 @@ pub fn Home() -> Element {
             "a senior at Stuyvesant High School."
             br {}
             "Check out my projects "
-            Link { to: "/projects", "here" }
+            Link { to: "#projects", "here" }
             "."
         }
+        Section { name: "projects", Projects {} }
+        Section { name: "links", Links {} }
     }
 }

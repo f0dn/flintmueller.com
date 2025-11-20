@@ -6,21 +6,16 @@ use dioxus_logger::tracing::{info, Level};
 mod colors;
 mod header;
 mod home;
-mod projects;
 mod links;
+mod projects;
+mod section;
 
 use home::Home;
-use projects::Projects;
-use links::Links;
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
     #[route("/")]
     Home {},
-    #[route("/projects")]
-    Projects {},
-    #[route("/links")]
-    Links {},
 }
 
 fn main() {

@@ -12,8 +12,8 @@ pub fn Header() -> Element {
             justify_content: "space-between",
             width: "100%",
             HeaderItem { path: "/", name: "home" }
-            HeaderItem { path: "/projects", name: "projects" }
-            HeaderItem { path: "/links", name: "links" }
+            HeaderItem { path: "#projects", name: "projects" }
+            HeaderItem { path: "#links", name: "links" }
         }
     }
 }

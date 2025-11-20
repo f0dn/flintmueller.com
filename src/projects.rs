@@ -1,12 +1,10 @@
 use dioxus::prelude::*;
 
 use crate::colors::*;
-use crate::header::Header;
 
 #[component]
 pub fn Projects() -> Element {
     rsx! {
-        Header {}
         div {
             Project {
                 name: "This website",

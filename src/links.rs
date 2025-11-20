@@ -1,11 +1,8 @@
 use dioxus::prelude::*;
 
-use crate::header::Header;
-
 #[component]
 pub fn Links() -> Element {
     rsx! {
-        Header {}
         div {
             Link {
                 name: "GitHub",
