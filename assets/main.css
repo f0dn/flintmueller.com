@@ -1,21 +1,42 @@
 :root {
-  --base_color: hsl(220, 50%, 60%);
-  --base_color_2: hsl(from var(--base_color) h s calc(l - 0.1));
-  --base_color_3: hsl(from var(--base_color) h s calc(l - 0.2));
-  --base_color_4: hsl(from var(--base_color) h s calc(l - 0.3));
-  --base_color_5: hsl(from var(--base_color) h s calc(l - 0.4));
-  --base_color_6: hsl(from var(--base_color) h s calc(l - 0.5));
-  --white_color: hsl(0, 0%, 80%);
-  --black_color: hsl(0, 0%, 10%);
-  --purple_color: hsl(from var(--base_color) calc(h + 60) s l);
-  --red_color: hsl(from var(--base_color) calc(h + 120) s l);
-  --yellow_color: hsl(from var(--base_color) calc(h + 180) s l);
-  --green_color: hsl(from var(--base_color) calc(h + 240) s l);
-  --sea_color: hsl(from var(--base_color) calc(h + 300) s l);
+  --rosewater: hsl(9.600, 55.556%, 91.176%);
+  --flamingo: hsl(0.000, 58.730%, 87.647%);
+  --pink: hsl(316.471, 71.831%, 86.078%);
+  --mauve: hsl(267.407, 83.505%, 80.980%);
+  --red: hsl(343.269, 81.250%, 74.902%);
+  --maroon: hsl(350.400, 65.217%, 77.451%);
+  --peach: hsl(22.957, 92.000%, 75.490%);
+  --yellow: hsl(41.351, 86.047%, 83.137%);
+  --green: hsl(115.455, 54.098%, 76.078%);
+  --teal: hsl(170.000, 57.353%, 73.333%);
+  --sky: hsl(189.184, 71.014%, 72.941%);
+  --sapphire: hsl(198.500, 75.949%, 69.020%);
+  --blue: hsl(217.168, 91.870%, 75.882%);
+  --blue1: hsl(from var(--blue) h s calc(l - 10));
+  --blue2: hsl(from var(--blue) h s calc(l - 20));
+  --blue3: hsl(from var(--blue) h s calc(l - 30));
+  --blue4: hsl(from var(--blue) h s calc(l - 40));
+  --blue5: hsl(from var(--blue) h s calc(l - 50));
+  --blue6: hsl(from var(--blue) h s calc(l - 60));
+  --lavender: hsl(231.892, 97.368%, 85.098%);
+  --text: hsl(226.154, 63.934%, 88.039%);
+  --subtext1: hsl(226.667, 35.294%, 80.000%);
+  --subtext0: hsl(227.647, 23.611%, 71.765%);
+  --overlay2: hsl(228.387, 16.757%, 63.725%);
+  --overlay1: hsl(229.655, 12.775%, 55.490%);
+  --overlay0: hsl(230.769, 10.744%, 47.451%);
+  --surface2: hsl(232.500, 12.000%, 39.216%);
+  --surface1: hsl(234.286, 13.208%, 31.176%);
+  --surface0: hsl(236.842, 16.239%, 22.941%);
+  --base: hsl(240.000, 21.053%, 14.902%);
+  --mantle: hsl(240.000, 21.311%, 11.961%);
+  --crust: hsl(240.000, 22.727%, 8.627%);
 }
 
 body {
-  background-color: var(--base_color_4);
+  background-color: var(--blue5);
+  color: var(--text);
+  margin: 0;
 }
 
 #main {
@@ -24,10 +45,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Courier New';
 }
 
 a {
   text-decoration: none;
-  color: var(--base_color);
+  color: var(--blue1);
+}
+
+a:hover {
+  color: var(--blue2);
 }

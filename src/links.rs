@@ -1,0 +1,33 @@
+use dioxus::prelude::*;
+
+use crate::header::Header;
+
+#[component]
+pub fn Links() -> Element {
+    rsx! {
+        Header {}
+        div {
+            Link {
+                name: "GitHub",
+                link: "https://github.com/f0dn",
+                svg: "github/github-mark-white.svg"
+            }
+        }
+    }
+}
+
+#[component]
+fn Link(name: &'static str, link: &'static str, svg: &'static str) -> Element {
+    rsx! {
+        div { display: "flex", align_items: "center",
+            img {
+                src: svg,
+                alt: name,
+                height: "15%",
+                width: "15%",
+                padding_right: "2%"
+            }
+            a { padding_top: "1%", href: link, "{name}" }
+        }
+    }
+}
