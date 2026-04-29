@@ -4,6 +4,10 @@ use dioxus::prelude::*;
 pub fn Links() -> Element {
     rsx! {
         div {
+            align_items: "center",
+            display: "flex",
+            flex_direction: "row",
+            justify_content: "center",
             Link {
                 name: "GitHub",
                 link: "https://github.com/f0dn",

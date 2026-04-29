@@ -11,7 +11,9 @@ pub fn Header() -> Element {
             display: "flex",
             justify_content: "space-between",
             width: "100%",
-            HeaderItem { path: "/", name: "home" }
+            position: "sticky",
+            top: "0",
+            HeaderItem { path: "#", name: "home" }
             HeaderItem { path: "#projects", name: "projects" }
             HeaderItem { path: "#links", name: "links" }
         }
@@ -22,7 +24,9 @@ pub fn Header() -> Element {
 fn HeaderItem(path: &'static str, name: &'static str) -> Element {
     rsx! {
         div { padding: "0.5em",
-            Link { to: path, "{name}" }
+            Link { to: path,
+                b { "{name}" }
+            }
         }
     }
 }

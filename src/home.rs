@@ -1,5 +1,7 @@
 use dioxus::prelude::*;
 
+use crate::footer::Footer;
+use crate::footer::FOOTER_HEIGHT;
 use crate::header::Header;
 use crate::links::Links;
 use crate::projects::Projects;
@@ -17,7 +19,12 @@ pub fn Home() -> Element {
             Link { to: "#projects", "here" }
             "."
         }
+        for _ in 0..100 {
+            br {}
+        }
         Section { name: "projects", Projects {} }
         Section { name: "links", Links {} }
+        div { height: FOOTER_HEIGHT, "um?" }
+        Footer {}
     }
 }

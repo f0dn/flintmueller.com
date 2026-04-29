@@ -4,6 +4,7 @@ use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
 mod colors;
+mod footer;
 mod header;
 mod home;
 mod links;
