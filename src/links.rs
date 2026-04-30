@@ -1,5 +1,7 @@
 use dioxus::prelude::*;
 
+use crate::icons::GITHUB;
+
 #[component]
 pub fn Links() -> Element {
     rsx! {
@@ -11,18 +13,18 @@ pub fn Links() -> Element {
             Link {
                 name: "GitHub",
                 link: "https://github.com/f0dn",
-                svg: "github/github-mark-white.svg"
+                img: GITHUB
             }
         }
     }
 }
 
 #[component]
-fn Link(name: &'static str, link: &'static str, svg: &'static str) -> Element {
+fn Link(name: &'static str, link: &'static str, img: Asset) -> Element {
     rsx! {
         div { display: "flex", align_items: "center",
             img {
-                src: svg,
+                src: img,
                 alt: name,
                 height: "15%",
                 width: "15%",

@@ -1,17 +1,19 @@
 #![allow(non_snake_case)]
 
 use dioxus::prelude::*;
-use dioxus_logger::tracing::{info, Level};
 
 mod colors;
 mod footer;
 mod header;
 mod home;
+mod icons;
 mod links;
 mod projects;
 mod section;
 
 use home::Home;
+
+static CSS: Asset = asset!("/assets/main.css");
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
@@ -20,13 +22,13 @@ enum Route {
 }
 
 fn main() {
-    dioxus_logger::init(Level::INFO).expect("failed to init logger");
     info!("starting app");
     launch(App);
 }
 
 fn App() -> Element {
     rsx! {
+        document::Stylesheet { href: "{CSS}" }
         Router::<Route> {}
     }
 }

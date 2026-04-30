@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::colors::*;
+use crate::{colors::*, icons::GITHUB};
 
 pub const FOOTER_HEIGHT: &str = "5%";
 
@@ -19,18 +19,18 @@ pub fn Footer() -> Element {
             FooterItem {
                 name: "GitHub",
                 link: "https://github.com/f0dn",
-                svg: "github/github-mark-white.svg"
+                img: GITHUB
             }
         }
     }
 }
 
 #[component]
-fn FooterItem(name: &'static str, link: &'static str, svg: &'static str) -> Element {
+fn FooterItem(name: &'static str, link: &'static str, img: Asset) -> Element {
     rsx! {
         div {
             a { href: link,
-                img { height: "100%", src: svg, alt: name }
+                img { height: "100%", src: img, alt: name }
             }
         }
     }
