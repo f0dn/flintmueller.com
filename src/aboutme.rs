@@ -1,9 +1,11 @@
 use dioxus::prelude::*;
 
+use crate::container::Container;
+
 #[component]
 pub fn AboutMe() -> Element {
     rsx! {
-        div {
+        Container {
             // TODO PUT LINKS TO STUFF
             "
 I'm a computer science enthusiast who loves tinkering around with systems programming,

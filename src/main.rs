@@ -4,6 +4,7 @@ use dioxus::prelude::*;
 
 mod aboutme;
 mod colors;
+mod container;
 mod footer;
 mod header;
 mod home;

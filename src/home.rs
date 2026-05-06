@@ -19,31 +19,38 @@ pub fn Home() -> Element {
             background_repeat: "no-repeat",
             background_size: "100% auto",
             background_position: "0 10%",
-            //Header {}
-            div { display: "flex",
-                div {
-                    width: "150px",
-                    height: "200px",
-                    overflow: "hidden",
-                    border: "5px solid {BLUE}",
-                    background_color: TEXT,
-                    border_radius: "60px",
-                    img {
-                        src: PROFILE,
-                        width: "100%",
-                        height: "100%",
-                        object_fit: "cover",
+            div {
+                margin: "10%",
+                //Header {}
+                div { display: "flex",
+                    div {
+                        width: "200px",
+                        height: "200px",
+                        overflow: "hidden",
+                        border: "5px solid",
+                        border_color: BLUE,
+                        border_radius: "60px",
+                        background_color: TEXT,
+                        img {
+                            src: PROFILE,
+                            width: "100%",
+                            height: "100%",
+                            object_fit: "cover",
+                        }
+                    }
+                    h1 {
+                        margin_left: "40px",
+                        "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University."
                     }
                 }
-                h1 { "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University." }
+                Section { name: "projects", Projects {} }
+                Section { name: "about me", AboutMe {} }
+                for _ in 0..100 {
+                    br {}
+                }
+                //Section { name: "links", Links {} }
+                //Footer {}
             }
-            Section { name: "projects", Projects {} }
-            Section { name: "about me", AboutMe {} }
-            for _ in 0..100 {
-                br {}
-            }
-            //Section { name: "links", Links {} }
-            //Footer {}
         }
     }
 }

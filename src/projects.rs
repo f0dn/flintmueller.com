@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::colors::*;
+use crate::container::Container;
 
 #[component]
 pub fn Projects() -> Element {
@@ -38,7 +38,7 @@ pub fn Projects() -> Element {
 #[component]
 fn Project(name: &'static str, desc: &'static str, link: &'static str) -> Element {
     rsx! {
-        div { background_color: BLUE, color: TEXT, padding: "2%",
+        Container {
             h1 {
                 Link { to: link, "{name}" }
             }
