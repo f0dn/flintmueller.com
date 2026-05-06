@@ -8,7 +8,7 @@ pub fn Projects() -> Element {
         div {
             display: "grid",
             justify_content: "center",
-            grid_template_columns: "repeat(auto-fit, minmax(10em, 18em))",
+            grid_template_columns: "repeat(var(--project_columns, 3), auto)",
             gap: "1em",
             Project {
                 name: "Razor",
