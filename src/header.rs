@@ -6,7 +6,7 @@ use crate::colors::*;
 pub fn Header() -> Element {
     rsx! {
         div {
-            background_color: BLUE_6,
+            background_color: BLUE,
             font_size: "1.5em",
             display: "flex",
             justify_content: "space-between",

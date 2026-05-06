@@ -12,12 +12,6 @@
   --sky: hsl(189.184, 71.014%, 72.941%);
   --sapphire: hsl(198.500, 75.949%, 69.020%);
   --blue: hsl(217.168, 91.870%, 75.882%);
-  --blue1: hsl(from var(--blue) h s calc(l - 10));
-  --blue2: hsl(from var(--blue) h s calc(l - 20));
-  --blue3: hsl(from var(--blue) h s calc(l - 30));
-  --blue4: hsl(from var(--blue) h s calc(l - 40));
-  --blue5: hsl(from var(--blue) h s calc(l - 50));
-  --blue6: hsl(from var(--blue) h s calc(l - 60));
   --lavender: hsl(231.892, 97.368%, 85.098%);
   --text: hsl(226.154, 63.934%, 88.039%);
   --subtext1: hsl(226.667, 35.294%, 80.000%);
@@ -34,7 +28,7 @@
 }
 
 body {
-  background-color: var(--blue5);
+  background-color: var(--blue);
   color: var(--text);
   margin: 0;
 }
@@ -45,14 +39,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New';
+  font-family: 'DejaVu Sans Mono', monospace;
 }
 
 a {
   text-decoration: none;
-  color: var(--blue1);
+  color: var(--blue);
 }
 
 a:hover {
-  color: var(--blue2);
+  color: var(--blue);
 }
