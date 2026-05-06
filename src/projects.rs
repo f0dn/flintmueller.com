@@ -39,6 +39,7 @@ fn Project(name: &'static str, desc: &'static str, link: &'static str) -> Elemen
     rsx! {
         Container {
             h2 {
+                margin_top: "0.2em",
                 Link { to: link, {name} }
             }
             p { {desc} }

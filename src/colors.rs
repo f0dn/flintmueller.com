@@ -23,3 +23,4 @@ pub const SURFACE_0: &str = "var(--surface0)";
 pub const BASE: &str = "var(--base)";
 pub const MANTLE: &str = "var(--mantle)";
 pub const CRUST: &str = "var(--crust)";
+pub const BACKGROUND: &str = "var(--background)";

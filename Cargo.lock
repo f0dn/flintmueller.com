@@ -656,6 +656,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "dioxus-feather-icons"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d80d6c180f509df34b6f6e9229f1cff02d3f69fed651519c387899b037b8d96a"
+
+[[package]]
 name = "dioxus-fullstack"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1057,6 +1063,7 @@ name = "flint"
 version = "0.1.0"
 dependencies = [
  "dioxus",
+ "dioxus-feather-icons",
  "manganis",
 ]
 

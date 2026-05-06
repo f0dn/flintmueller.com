@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use dioxus_feather_icons::prelude::*;
 
 use crate::colors::*;
 
@@ -6,27 +7,32 @@ use crate::colors::*;
 pub fn Header() -> Element {
     rsx! {
         div {
-            background_color: BLUE,
-            font_size: "1.5em",
+            height: "3em",
+            background_color: BACKGROUND,
             display: "flex",
-            justify_content: "space-between",
+            justify_content: "center",
             width: "100%",
             position: "sticky",
             top: "0",
-            HeaderItem { path: "#", name: "home" }
-            HeaderItem { path: "#projects", name: "projects" }
-            HeaderItem { path: "#links", name: "links" }
+            SVGLink { link: "https://github.com/f0dn", icon: icon!(github) }
+            SVGLink {
+                link: "https://www.instagram.com/f0d1n",
+                icon: icon!(instagram),
+            }
+            SVGLink {
+                link: "https://linkedin.com/in/flint-mueller",
+                icon: icon!(linkedin),
+            }
+            SVGLink { link: "RESUME", icon: icon!(file_text) }
         }
     }
 }
 
 #[component]
-fn HeaderItem(path: &'static str, name: &'static str) -> Element {
+fn SVGLink(link: &'static str, icon: Element) -> Element {
     rsx! {
-        div { padding: "0.5em",
-            Link { to: path,
-                b { {name} }
-            }
+        div { padding: "0.5em", width: "2em",
+            Link { to: link, {icon} }
         }
     }
 }

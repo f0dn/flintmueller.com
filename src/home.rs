@@ -2,9 +2,7 @@ use dioxus::prelude::*;
 
 use crate::aboutme::AboutMe;
 use crate::colors::{BLUE, TEXT};
-use crate::footer::Footer;
 use crate::header::Header;
-use crate::links::Links;
 use crate::projects::Projects;
 use crate::section::Section;
 
@@ -19,9 +17,12 @@ pub fn Home() -> Element {
             background_repeat: "no-repeat",
             background_size: "100% auto",
             background_position: "0 13em",
-            div { margin: "10%",
-                //Header {}
-                div { display: "flex", margin_bottom: "17em",
+            Header {}
+            div { margin_left: "10%", margin_right: "10%",
+                div {
+                    display: "flex",
+                    margin_bottom: "17em",
+                    align_items: "center",
                     div {
                         width: "7em",
                         height: "10em",
@@ -42,14 +43,13 @@ pub fn Home() -> Element {
                         "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University."
                     }
                 }
-                Section { name: "Projects", id: "projects", Projects {} }
+                Section { name: "Top Projects", id: "projects", Projects {} }
                 Section { name: "About Me", id: "about-me", AboutMe {} }
                 for _ in 0..100 {
                     br {}
                 }
-                //Section { name: "links", Links {} }
-                //Footer {}
             }
         }
+        {dioxus_feather_icons::sprite!()}
     }
 }

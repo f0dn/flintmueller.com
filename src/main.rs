@@ -5,11 +5,8 @@ use dioxus::prelude::*;
 mod aboutme;
 mod colors;
 mod container;
-mod footer;
 mod header;
 mod home;
-mod icons;
-mod links;
 mod projects;
 mod section;
 

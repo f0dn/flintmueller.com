@@ -9,4 +9,5 @@ edition = "2021"
 [dependencies]
 
 dioxus = { version = "0.7.6", features = ["web", "router"] }
+dioxus-feather-icons = "0.2.4"
 manganis = "0.7.6"
