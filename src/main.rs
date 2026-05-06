@@ -29,7 +29,7 @@ fn main() {
 
 fn App() -> Element {
     rsx! {
-        document::Stylesheet { href: "{CSS}" }
+        document::Stylesheet { href: CSS }
         Router::<Route> {}
     }
 }
