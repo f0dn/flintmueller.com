@@ -42,8 +42,8 @@ pub fn Home() -> Element {
                         "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University."
                     }
                 }
-                Section { name: "projects", Projects {} }
-                Section { name: "about me", AboutMe {} }
+                Section { name: "Projects", id: "projects", Projects {} }
+                Section { name: "About Me", id: "about-me", AboutMe {} }
                 for _ in 0..100 {
                     br {}
                 }

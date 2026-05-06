@@ -1,10 +1,10 @@
 use dioxus::prelude::*;
 
 #[component]
-pub fn Section(name: &'static str, children: Element) -> Element {
+pub fn Section(name: &'static str, id: &'static str, children: Element) -> Element {
     rsx! {
-        div { id: name, width: "100%",
-            h2 { display: "flex", justify_content: "center", {name} }
+        div { id, width: "100%",
+            h1 { display: "flex", justify_content: "center", {name} }
             {children}
         }
     }

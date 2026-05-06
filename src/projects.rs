@@ -38,10 +38,10 @@ pub fn Projects() -> Element {
 fn Project(name: &'static str, desc: &'static str, link: &'static str) -> Element {
     rsx! {
         Container {
-            h1 {
-                Link { to: link, "{name}" }
+            h2 {
+                Link { to: link, {name} }
             }
-            p { "{desc}" }
+            p { {desc} }
         }
     }
 }

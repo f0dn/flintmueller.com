@@ -25,7 +25,7 @@ fn HeaderItem(path: &'static str, name: &'static str) -> Element {
     rsx! {
         div { padding: "0.5em",
             Link { to: path,
-                b { "{name}" }
+                b { {name} }
             }
         }
     }

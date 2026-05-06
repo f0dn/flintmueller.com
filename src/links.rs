@@ -13,7 +13,7 @@ pub fn Links() -> Element {
             Link {
                 name: "GitHub",
                 link: "https://github.com/f0dn",
-                img: GITHUB
+                img: GITHUB,
             }
         }
     }
@@ -28,9 +28,9 @@ fn Link(name: &'static str, link: &'static str, img: Asset) -> Element {
                 alt: name,
                 height: "15%",
                 width: "15%",
-                padding_right: "2%"
+                padding_right: "2%",
             }
-            a { padding_top: "1%", href: link, "{name}" }
+            a { padding_top: "1%", href: link, {name} }
         }
     }
 }
