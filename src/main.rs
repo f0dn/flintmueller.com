@@ -2,6 +2,7 @@
 
 use dioxus::prelude::*;
 
+mod aboutme;
 mod colors;
 mod footer;
 mod header;

@@ -12,19 +12,24 @@ pub fn Projects() -> Element {
             grid_template_columns: "repeat(auto-fit, minmax(200px, 300px))",
             gap: "15px",
             Project {
-                name: "This Website",
-                desc: "A website built with Dioxus, a Rust web framework.",
-                link: "#"
+                name: "Razor",
+                desc: "Custom build compiler written in rust",
+                link: "https://github.com/f0dn/razor",
             }
             Project {
-                name: "Rust Compiler",
-                desc: "A compiler for a C-like language written in Rust.",
-                link: "https://github.com/f0dn/razor"
+                name: "This Website",
+                desc: "My personal portfolio written with Dioxus",
+                link: "#",
             }
             Project {
                 name: "Stuy Fission Robot Code",
                 desc: "2024-25 robot code for 310 Stuy Fission (Stuy's FTC team)",
-                link: "https://github.com/Fission310/into-the-deep"
+                link: "https://github.com/Fission310/into-the-deep",
+            }
+            Project {
+                name: "Trinity Chess Engine",
+                desc: "Experimental chess engine to play around with bitboards and search algorithms",
+                link: "https://github.com/f0dn/chess",
             }
         }
     }
