@@ -7,8 +7,8 @@ pub fn Container(children: Element) -> Element {
         div {
             background_color: BASE,
             color: TEXT,
-            padding: "2%",
-            border: "3px solid",
+            padding: "1em",
+            border: "0.3em solid",
             border_color: BLUE,
             {children}
         }

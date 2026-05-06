@@ -6,11 +6,10 @@ use crate::container::Container;
 pub fn Projects() -> Element {
     rsx! {
         div {
-            padding: "15px",
             display: "grid",
             justify_content: "center",
-            grid_template_columns: "repeat(auto-fit, minmax(200px, 300px))",
-            gap: "15px",
+            grid_template_columns: "repeat(auto-fit, minmax(10em, 18em))",
+            gap: "1em",
             Project {
                 name: "Razor",
                 desc: "Custom build compiler written in rust",

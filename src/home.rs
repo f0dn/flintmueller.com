@@ -18,18 +18,18 @@ pub fn Home() -> Element {
             background_image: "url({BACKGROUND})",
             background_repeat: "no-repeat",
             background_size: "100% auto",
-            background_position: "0 10%",
-            div {
-                margin: "10%",
+            background_position: "0 13em",
+            div { margin: "10%",
                 //Header {}
-                div { display: "flex",
+                div { display: "flex", margin_bottom: "17em",
                     div {
-                        width: "200px",
-                        height: "200px",
+                        width: "7em",
+                        height: "10em",
+                        min_width: "6em",
                         overflow: "hidden",
-                        border: "5px solid",
+                        border: "0.3em solid",
                         border_color: BLUE,
-                        border_radius: "60px",
+                        border_radius: "3.2em",
                         background_color: TEXT,
                         img {
                             src: PROFILE,
@@ -38,8 +38,7 @@ pub fn Home() -> Element {
                             object_fit: "cover",
                         }
                     }
-                    h1 {
-                        margin_left: "40px",
+                    h1 { width: "fit-content", margin_left: "1em",
                         "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University."
                     }
                 }
