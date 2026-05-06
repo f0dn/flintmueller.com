@@ -48,6 +48,15 @@ pub fn Home() -> Element {
                 }
                 Section { name: "Top Projects", id: "projects", Projects {} }
                 Section { name: "About Me", id: "about-me", AboutMe {} }
+                div { margin_top: "3em", color: TEXT,
+                    "Thanks to Olive Forman-Sarno for the amazing background picture <3"
+                    br {}
+                    "You can find some of her writing for the Bronx Science Newspaper "
+                    a { href: "https://thesciencesurvey.com/staff_name/olive-forman-sarno/",
+                        "here"
+                    }
+                    "."
+                }
             }
         }
         {dioxus_feather_icons::sprite!()}
