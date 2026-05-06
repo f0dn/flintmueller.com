@@ -16,21 +16,21 @@ pub fn Home() -> Element {
             background_image: "url({BACKGROUND})",
             background_repeat: "no-repeat",
             background_size: "100% auto",
-            background_position: "0 13em",
+            background_position: "0 20vw",
             Header {}
-            div { margin_left: "10%", margin_right: "10%",
+            div { margin: "10%", margin_top: "0",
                 div {
                     display: "flex",
-                    margin_bottom: "17em",
                     align_items: "center",
+                    height: "28vw",
+                    margin_bottom: "27vw",
                     div {
-                        width: "7em",
-                        height: "10em",
-                        min_width: "6em",
+                        width: "16vw",
+                        height: "20vw",
                         overflow: "hidden",
-                        border: "0.3em solid",
+                        border: "0.7vw solid",
                         border_color: BLUE,
-                        border_radius: "3.2em",
+                        border_radius: "7vw",
                         background_color: TEXT,
                         img {
                             src: PROFILE,
@@ -39,15 +39,15 @@ pub fn Home() -> Element {
                             object_fit: "cover",
                         }
                     }
-                    h1 { width: "fit-content", margin_left: "1em",
-                        "Hi, I'm Flint, a sophomore studying computer science at Stony Brook University."
+                    h1 {
+                        width: "fit-content",
+                        margin_left: "1em",
+                        font_size: "3.5vw",
+                        "Hi, I'm Flint, studying computer science at Stony Brook University."
                     }
                 }
                 Section { name: "Top Projects", id: "projects", Projects {} }
                 Section { name: "About Me", id: "about-me", AboutMe {} }
-                for _ in 0..100 {
-                    br {}
-                }
             }
         }
         {dioxus_feather_icons::sprite!()}
