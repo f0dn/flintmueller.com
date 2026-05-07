@@ -6,8 +6,8 @@ use crate::header::Header;
 use crate::projects::Projects;
 use crate::section::Section;
 
-static BACKGROUND: Asset = asset!("/assets/bg.jpeg");
-static PROFILE: Asset = asset!("/assets/me.png");
+static BACKGROUND: Asset = asset!("/assets/bg.webp");
+static PROFILE: Asset = asset!("/assets/me.webp");
 
 #[component]
 pub fn Home() -> Element {
