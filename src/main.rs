@@ -21,7 +21,6 @@ enum Route {
 }
 
 fn main() {
-    info!("starting app");
     launch(App);
 }
 

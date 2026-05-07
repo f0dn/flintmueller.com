@@ -872,9 +872,9 @@ dependencies = [
 
 [[package]]
 name = "dioxus-router-macro"
-version = "0.7.6"
+version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b525ab775585f1dc4850178de9d0cb6bb37f7b9c1a1a0c121eab7449d7021480"
+checksum = "74b91aa613f584c2dd598436c33d22b94b85b132b449eae8f81e538300980222"
 dependencies = [
  "base16",
  "digest",
