@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 pub const ROSEWATER: &str = "var(--rosewater)";
 pub const FLAMINGO: &str = "var(--flamingo)";
 pub const PINK: &str = "var(--pink)";
