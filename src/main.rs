@@ -7,17 +7,22 @@ mod colors;
 mod container;
 mod header;
 mod home;
+mod notfound;
 mod projects;
 mod section;
 
 use home::Home;
+use notfound::NotFound;
 
 static CSS: Asset = asset!("/assets/main.css");
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
     #[route("/")]
-    Home {},
+    Home,
+
+    #[route("/404")]
+    NotFound,
 }
 
 // The server function at the endpoint "static_routes" will be called by the CLI to generate the list of static

@@ -37,6 +37,7 @@ pub fn Home() -> Element {
                             width: "100%",
                             height: "100%",
                             object_fit: "cover",
+                            draggable: false,
                         }
                     }
                     h1 {
@@ -52,7 +53,7 @@ pub fn Home() -> Element {
                     "Thanks to Olive Forman-Sarno for the amazing background picture <3"
                     br {}
                     "You can find some of her writing for the Bronx Science Newspaper "
-                    a { href: "https://thesciencesurvey.com/staff_name/olive-forman-sarno/",
+                    Link { to: "https://thesciencesurvey.com/staff_name/olive-forman-sarno/",
                         "here"
                     }
                     "."
