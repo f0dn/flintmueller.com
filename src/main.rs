@@ -60,6 +60,7 @@ fn main() {
 
 fn App() -> Element {
     rsx! {
+        document::Link { rel: "icon", href: asset!("/assets/favicon.ico") }
         document::Stylesheet { href: CSS }
         Router::<Route> {}
     }
