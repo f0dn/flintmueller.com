@@ -5,9 +5,9 @@ use crate::container::Container;
 #[component]
 pub fn AboutMe() -> Element {
     rsx! {
-        Container {
+        Container { padding_top: "0", padding_bottom: "0",
             // TODO PUT LINKS TO STUFF
-            p { margin_top: "0",
+            p {
                 "I'm a computer science enthusiast who loves tinkering around with systems
 programming, compilers, and game development. I first discovered my passion for programming
 during the Covid-19 pandemic when I built a series of games with Unity and PyGame to keep
@@ -33,7 +33,7 @@ students through building their own chess engine from scratch through the Stony 
 Computing Society's Project Quack."
             }
 
-            p { margin_bottom: "0",
+            p {
                 "Currently, I'm interested in a bunch of technologies, including Rust, Haskell, Typst,
 and Vim. On the non-cs side of things, I love playing chess and basketball, solving
 Rubik's cubes, and listening to music."
