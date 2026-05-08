@@ -68,22 +68,14 @@ pub fn Projects() -> Element {
             onclick: move |_| {
                 expanded.toggle();
             },
-            {
-                if !*expanded.read() {
-                    rsx! { "Show More" }
-                } else {
-                    rsx! {}
-                }
+            if !*expanded.read() {
+                "Show More"
             }
             div { height: "2em", width: "2em",
                 {if *expanded.read() { icon!(chevron_up) } else { icon!(chevron_down) }}
             }
-            {
-                if *expanded.read() {
-                    rsx! { "Show Less" }
-                } else {
-                    rsx! {}
-                }
+            if *expanded.read() {
+                "Show Less"
             }
         }
     }
