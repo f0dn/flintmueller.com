@@ -1,8 +1,8 @@
 help:
-	@echo "Usage: make build"
-	@echo "       make deploy"
-	@echo "       make serve"
-	@echo "       make dev"
+	@echo "Usage: make build     # ssg"
+	@echo "       make deploy    # deploy ssg to server"
+	@echo "       make serve     # serve ssg locally"
+	@echo "       make dev       # dx serve"
 
 build:
 	@rm -rf dist

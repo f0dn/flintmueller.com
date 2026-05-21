@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use dioxus_feather_icons::icon;
 
-use crate::container::Container;
+use crate::{colors::BLUE, container::Container};
 
 #[component]
 pub fn Projects() -> Element {
@@ -16,45 +16,45 @@ pub fn Projects() -> Element {
             grid_auto_rows: if *expanded.read() { "auto" } else { "0" },
             overflow: "hidden",
             column_gap: "1em",
-            Project {
-                name: "Razor",
-                desc: "Custom build compiler written in rust",
-                link: "https://github.com/f0dn/razor",
+            Project { name: "Razor", link: "https://github.com/f0dn/razor",
+                "Custom built compiler written in rust inspired by "
+                Link { to: "https://www.youtube.com/playlist?list=PLUDlas_Zy_qC7c5tCgTMYq2idyyT241qs",
+                    "this"
+                }
+                " wonderful YouTube series"
             }
             Project {
                 name: "This Website",
-                desc: "My personal portfolio written with Dioxus",
-                link: "#",
+                link: "https://github.com/f0dn/flintmueller.com",
+                "My personal portfolio written built with "
+                Link { to: "https://dioxuslabs.com", "Dioxus" }
             }
             Project {
                 name: "Stuy Fission Robot Code",
-                desc: "2024-25 robot code for 310 Stuy Fission (Stuy's FTC team)",
                 link: "https://github.com/Fission310/into-the-deep",
+                "2024-25 robot code for 310 Stuy Fission (Stuyvesant's FTC team)"
             }
             Project {
                 name: "Trinity Chess Engine",
-                desc: "Experimental chess engine to play around with bitboards and search algorithms",
                 link: "https://github.com/f0dn/chess",
+                "Experimental chess engine to play around with bitboards and search algorithms"
+            }
+            Project { name: "Reverse Engineering",
+                "I've also done some experiments reverse engineering auth-token generation (not maliciously, just for fun!)"
             }
             Project {
-                name: "Trinity Chess Engine",
-                desc: "Experimental chess engine to play around with bitboards and search algorithms",
-                link: "https://github.com/f0dn/chess",
+                name: "Advent of Code",
+                link: "https://github.com/f0dn/advent2025",
+                "I complete "
+                Link { to: "https://adventofcode.com", "Advent of Code" }
+                " every year!"
             }
             Project {
-                name: "Trinity Chess Engine",
-                desc: "Experimental chess engine to play around with bitboards and search algorithms",
-                link: "https://github.com/f0dn/chess",
-            }
-            Project {
-                name: "Trinity Chess Engine",
-                desc: "Experimental chess engine to play around with bitboards and search algorithms",
-                link: "https://github.com/f0dn/chess",
-            }
-            Project {
-                name: "Trinity Chess Engine",
-                desc: "Experimental chess engine to play around with bitboards and search algorithms",
-                link: "https://github.com/f0dn/chess",
+                name: "QuackEngine",
+                link: "https://github.com/f0dn/quackengine",
+                "Chess engine for the "
+                Link { to: "https://sbcs.io/project-quack", "Project Quack" }
+                " group I mentored in my freshman year at Stony Brook"
             }
         }
         a {
@@ -82,13 +82,21 @@ pub fn Projects() -> Element {
 }
 
 #[component]
-fn Project(name: &'static str, desc: &'static str, link: &'static str) -> Element {
+fn Project(
+    name: &'static str,
+    children: Element,
+    #[props(into, default = "")] link: NavigationTarget, // a little hacky :O
+) -> Element {
     rsx! {
         Container { margin_bottom: "1em", // to emulate row gap
-            h2 { margin_top: "0.2em",
-                Link { to: link, {name} }
+            h2 { margin_top: "0.2em", color: BLUE,
+                if link != Into::into("") {
+                    Link { to: link, {name} }
+                } else {
+                    {name}
+                }
             }
-            p { {desc} }
+            p { {children} }
         }
     }
 }
